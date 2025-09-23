@@ -6,6 +6,7 @@ public class ArrayaList {
 
 		ArrayList<Integer> numbers = new ArrayList<>();
 		ArrayList<String> Cricketers = new ArrayList<>();
+		ArrayList<String> crick = new ArrayList<>();
 
 		Cricketers.add("Rohit Sharma");
 		Cricketers.add("Virat Kohli");
@@ -26,6 +27,10 @@ public class ArrayaList {
 				numbers.remove(2);
 
 				System.out.println(numbers);
+
+	crick.add("hardik");
+		Cricketers.addAll(crick);
+		System.out.println(Cricketers);
 
 
 	}
