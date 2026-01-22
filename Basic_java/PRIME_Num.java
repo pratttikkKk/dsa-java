@@ -1,28 +1,20 @@
-import java.util.Scanner;
 
 public class PRIME_Num {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int n= 11;
+        boolean isPrime = true;
+      for (int i = 2; i*i < n; i++) {                                     //as we know if (n = a*b) 
+                                                                        //then a or b is less than sqroot of n 
+                                                                        //so acc to this we just have to check till sqrt of n
+        if(n%i==0){
+          isPrime = false;
 
-        if (n <= 1) {
-            System.out.println("Not Prime");
-        } else {
-            boolean isPrime = true;
-
-            for (int i = 2; i * i <= n; i++) {
-                if (n % i == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-
-            if (isPrime)
-                System.out.println("Prime");
-            else
-                System.out.println("Not Prime");
-        }
-
-        sc.close();
-    }
-}
+        } 
+      }
+      if(isPrime){
+        System.out.println("this is a prime number");
+      }
+      else{
+        System.out.println("number is not prime.");
+      }
+    }}
