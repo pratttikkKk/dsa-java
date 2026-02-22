@@ -10,7 +10,7 @@ public class BinarySearch {
 
         if(nums[mid] == target){
             result = mid;
-            right = mid-1;
+            right = mid-1;                        // manadatory for process should not go in infinite loop + to find the first occurance
         }
         else if(target < nums[mid] ){
             right = mid -1;
@@ -24,8 +24,15 @@ public class BinarySearch {
 }
 public static void main(String[] args){
 	BinarySearch obj = new BinarySearch();
-	int[] nums ={-1,0,3,5,9,12};
-	int result= obj.search(nums,9);
-System.out.println(result);
+	int[] nums1 ={1,2,2,2,3};
+		int[] nums2 ={-1,0,2,4,6,9,10};
+
+
+	int result1= obj.search(nums1,2);         //it find's the first occurance
+		int result2= obj.search(nums2,9);
+
+System.out.println(result1);
+System.out.println(result2);
+
 }
 }
