@@ -1,11 +1,12 @@
-package Recursion;
-
 public class PrintNumbers{
 	public static void main(String[] args) {
-		function(10);
+print(1);
 	}
-	 public static void function(int n){
-      System.out.println(n);
-	 }
-
-}
+	static void print(int n){
+		if(n>5){
+			return ;
+		}
+		System.out.println(n);
+		 print(n+1);
+	}
+}  
