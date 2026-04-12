@@ -4,9 +4,9 @@ public class SumOfDigits {
 		
 	}
 	static int Sum(int n){
-		int digit=n%10;
 		if(n<1){return 0;}
-		return digit+Sum(n/10);
+		
+		return n%10+Sum(n/10);
 
 	}
 }
