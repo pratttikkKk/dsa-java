@@ -4,7 +4,7 @@ public class PowerOfAll {
 	}
 	public static double myPow(double x, int n) {
 
-        long N = n;  // handle overflow
+        long N = n;
 
         if(N < 0){
             x = 1 / x;
