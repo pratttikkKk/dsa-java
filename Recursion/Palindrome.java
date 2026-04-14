@@ -14,7 +14,7 @@ class solution{
     }
 }
 public class Palindrome{
-    public static void main(String[] args) {
+public static void main(String[] args) {
 solution obj = new solution();
 System.out.println(obj.isPalindrome(121));
 System.out.println(obj.isPalindrome(12451));
