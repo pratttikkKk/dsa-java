@@ -1,5 +1,4 @@
 
-
 public class CountNum {
 	public static void main(String[] args) {
 		System.out.println(Counter(30405120,0));
