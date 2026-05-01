@@ -88,16 +88,10 @@ public class Pattern2 {
 	int m=5;
   int n=9;
 	for (int i = 1; i <= n; i++) {
-		if(i<=m){
-			for (int j = 1; j <= i; j++) {
+		int totalCol = i>m ? m+5-i : i;
+			for (int j = 1; j <= totalCol; j++) {
 					System.out.print("*");
 			}
-		}
-		else{
-			for (int j = 1; j <= m+5-i; j++) {
-					System.out.print("*");
-			}
-		}
 			System.out.println();
 	}
 	}
