@@ -2,40 +2,25 @@ import java.util.HashMap;
 
 public class TwoSum {
 
-    public static int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {//1,3,4,6,8,9 >> 1,9 4,6
+HashMap<Integer,Integer> hMap = new HashMap<>();
+for(int i=0; i<nums.length; i++){
+    int complement = target-nums[i];
+    if(hMap.containsValue(complement)){
+     return new int[] {i,hMap.get(complement)};
+    }
+    hMap.put(i,nums[i]);
+}
+return new int[]{};
 
-        // Create HashMap
-        HashMap<Integer, Integer> map = new HashMap<>();
 
-        // Traverse array
-        for (int i = 0; i < nums.length; i++) {
-
-            // Current number
-            int current = nums[i];
-
-            // Find complement
-            int complement = target - current;
-
-            // Check if complement exists
-            if (map.containsKey(complement)) {
-
-                return new int[] { map.get(complement), i };
-            }
-
-            // Store current number with index
-            map.put(current, i);
-        }
-
-        return new int[] {};
     }
 
     public static void main(String[] args) {
-
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
-
-        int[] result = twoSum(nums, target);
-
-        System.out.println(result[0] + " " + result[1]);
+int[] nums = {1,3,4,6,8,9};
+int target = 16;
+    
+int[] result = twoSum(nums, target);
+System.out.println(result[0]+" , "+result[1]);
     }
 }
