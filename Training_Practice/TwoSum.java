@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class TwoSum {
 
-    public static int[] twoSum(int[] nums, int target) {//1,3,4,6,8,9 >> 1,9 4,6
+    public static int[] twoSum(int[] nums, int target) {  //1,3,4,6,8,9 >> 1,9 4,6
 HashMap<Integer,Integer> hMap = new HashMap<>();
 for(int i=0; i<nums.length; i++){
     int complement = target-nums[i];
@@ -12,9 +12,8 @@ for(int i=0; i<nums.length; i++){
     hMap.put(i,nums[i]);
 }
 return new int[]{};
-
-
     }
+    
 
     public static void main(String[] args) {
 int[] nums = {1,3,4,6,8,9};
