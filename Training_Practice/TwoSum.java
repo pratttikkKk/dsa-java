@@ -13,7 +13,7 @@ for(int i=0; i<nums.length; i++){
 }
 return new int[]{};
     }
-    
+
 
     public static void main(String[] args) {
 int[] nums = {1,3,4,6,8,9};
