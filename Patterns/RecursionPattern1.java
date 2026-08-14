@@ -5,7 +5,7 @@ public class RecursionPattern1 {
 		//triangle(10, 0);
 		//triangle2(4, 0);
 		int[] arr = {3,4,1,2,11,2,345,6,0,2,66};
-triangle3(arr, arr.length-1, 0);
+bubblesort(arr, arr.length-1, 0);
 System.out.println(Arrays.toString(arr));
 	}
 
@@ -40,7 +40,7 @@ System.out.println(Arrays.toString(arr));
 
 	}
 
-	static void triangle3(int[] arr, int r , int c) {
+	static void bubblesort(int[] arr, int r , int c) {
 		if(r==0) return;
 
 		if(c<r){
@@ -49,10 +49,10 @@ System.out.println(Arrays.toString(arr));
 				arr[c]=arr[c+1];
 				arr[c+1]=temp;
 			}
-			triangle3(arr,r, c+1);
+			bubblesort(arr,r, c+1);
 		}
 		else{
-			triangle3(arr, r-1, 0);
+			bubblesort(arr, r-1, 0);
 		}
 	}
 }
