@@ -4,22 +4,27 @@ import java.util.List;
 public class DisplayMaze {
 	public static void main(String[] args) {
 
-		maze("",3,3);
+		System.out.println(maze("",3,3));
 
 	}
 
-  static void maze(String p,int r, int c){
+  static ArrayList<String> maze(String p,int r, int c){
 
 		if(r==1 && c==1){
-			System.out.println(p);
-			return;
+			ArrayList<String> list = new ArrayList<>();
+       list.add(p);
+			 return list;
 		}
 
+		ArrayList<String> list = new ArrayList<>();
+
 		if(r>1){
-			maze(p+"D", r-1, c);
+			list.addAll(maze(p+"D", r-1, c));
 		}
 		if(c>1){
-			maze(p+"R",r,c-1);
+			list.addAll(maze(p+"R",r,c-1));
 		}
+
+		return list;
 	}
 }
